@@ -1,0 +1,1137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<site>
+		<siteName>北京时间</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>3000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset>utf-8</charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>看看新闻</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>3000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset>utf-8</charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>川报观察</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>3000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset>utf-8</charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>封面新闻</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>3000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset>utf-8</charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>网易新闻</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>3000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>百度新闻</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>7000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (iPhone; CPU iPhone OS 9_2 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13C75 Safari/601.1</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>老友网</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>3000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	
+	
+	<site>
+		<siteName>搜狐新闻</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>5000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>南宁新闻网</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>5000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>南宁市政府</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>5000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>东方头条</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>5000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>中国军网</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>5000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>中国新闻网</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>5000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>广西新闻网</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>5000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>腾讯新闻</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>中国资本证券网</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	
+	<site>
+		<siteName>微信-新华社</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+		<cookie>wxb_fp_id=2635950222; pgv_pvi=9935390720; tencentSig=6184200192; _qddaz=QD.riaiuu.q411jq.j96e1net; visit-wxb-id=99ba6f60723f1fa63ef494394214f0f2; PHPSESSID=9l3c87p9at3b271haql0qpi774; wxb_fp_id=2635950222; 6aHW_e4af_saltkey=xNXV09gJ; 6aHW_e4af_lastvisit=1515025676; 6aHW_e4af_sid=SPPKJf; 6aHW_e4af_lastact=1515029276%09uc.php%09; 6aHW_e4af_auth=2570HBLo26Vc9Co0pNIhc19HbOzQCyM0ULIj9%2FUpKyFEnbNqYyO3amh21jMHT3Hh7h8hFgpCY4iCEu1Jt76XVkZqHw4; Hm_lvt_5859c7e2fd49a1739a0b0f5a28532d91=1513149954,1515028778; Hm_lpvt_5859c7e2fd49a1739a0b0f5a28532d91=1515029281</cookie>
+	</site>
+	<site>
+		<siteName>微信-凤凰网</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+		<cookie>wxb_fp_id=2635950222; pgv_pvi=9935390720; tencentSig=6184200192; _qddaz=QD.riaiuu.q411jq.j96e1net; visit-wxb-id=99ba6f60723f1fa63ef494394214f0f2; PHPSESSID=9l3c87p9at3b271haql0qpi774; wxb_fp_id=2635950222; 6aHW_e4af_saltkey=xNXV09gJ; 6aHW_e4af_lastvisit=1515025676; 6aHW_e4af_sid=SPPKJf; 6aHW_e4af_lastact=1515029276%09uc.php%09; 6aHW_e4af_auth=2570HBLo26Vc9Co0pNIhc19HbOzQCyM0ULIj9%2FUpKyFEnbNqYyO3amh21jMHT3Hh7h8hFgpCY4iCEu1Jt76XVkZqHw4; Hm_lvt_5859c7e2fd49a1739a0b0f5a28532d91=1513149954,1515028778; Hm_lpvt_5859c7e2fd49a1739a0b0f5a28532d91=1515029281</cookie>
+	</site>
+	<site>
+		<siteName>微信-中国政府网</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+		<cookie>wxb_fp_id=2635950222; pgv_pvi=9935390720; tencentSig=6184200192; _qddaz=QD.riaiuu.q411jq.j96e1net; visit-wxb-id=99ba6f60723f1fa63ef494394214f0f2; PHPSESSID=9l3c87p9at3b271haql0qpi774; wxb_fp_id=2635950222; 6aHW_e4af_saltkey=xNXV09gJ; 6aHW_e4af_lastvisit=1515025676; 6aHW_e4af_sid=SPPKJf; 6aHW_e4af_lastact=1515029276%09uc.php%09; 6aHW_e4af_auth=2570HBLo26Vc9Co0pNIhc19HbOzQCyM0ULIj9%2FUpKyFEnbNqYyO3amh21jMHT3Hh7h8hFgpCY4iCEu1Jt76XVkZqHw4; Hm_lvt_5859c7e2fd49a1739a0b0f5a28532d91=1513149954,1515028778; Hm_lpvt_5859c7e2fd49a1739a0b0f5a28532d91=1515029281</cookie>
+	</site>
+	<site>
+		<siteName>微信-参考消息</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+		<cookie>wxb_fp_id=2635950222; pgv_pvi=9935390720; tencentSig=6184200192; _qddaz=QD.riaiuu.q411jq.j96e1net; visit-wxb-id=99ba6f60723f1fa63ef494394214f0f2; PHPSESSID=9l3c87p9at3b271haql0qpi774; wxb_fp_id=2635950222; 6aHW_e4af_saltkey=xNXV09gJ; 6aHW_e4af_lastvisit=1515025676; 6aHW_e4af_sid=SPPKJf; 6aHW_e4af_lastact=1515029276%09uc.php%09; 6aHW_e4af_auth=2570HBLo26Vc9Co0pNIhc19HbOzQCyM0ULIj9%2FUpKyFEnbNqYyO3amh21jMHT3Hh7h8hFgpCY4iCEu1Jt76XVkZqHw4; Hm_lvt_5859c7e2fd49a1739a0b0f5a28532d91=1513149954,1515028778; Hm_lpvt_5859c7e2fd49a1739a0b0f5a28532d91=1515029281</cookie>
+	</site>
+	
+	<site>
+		<siteName>微信-人民日报</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+		<cookie>wxb_fp_id=2635950222; pgv_pvi=9935390720; tencentSig=6184200192; _qddaz=QD.riaiuu.q411jq.j96e1net; visit-wxb-id=99ba6f60723f1fa63ef494394214f0f2; PHPSESSID=9l3c87p9at3b271haql0qpi774; wxb_fp_id=2635950222; 6aHW_e4af_saltkey=xNXV09gJ; 6aHW_e4af_lastvisit=1515025676; 6aHW_e4af_sid=SPPKJf; 6aHW_e4af_lastact=1515029276%09uc.php%09; 6aHW_e4af_auth=2570HBLo26Vc9Co0pNIhc19HbOzQCyM0ULIj9%2FUpKyFEnbNqYyO3amh21jMHT3Hh7h8hFgpCY4iCEu1Jt76XVkZqHw4; Hm_lvt_5859c7e2fd49a1739a0b0f5a28532d91=1513149954,1515028778; Hm_lpvt_5859c7e2fd49a1739a0b0f5a28532d91=1515029281</cookie>
+	</site>
+	
+	
+	<site>
+		<siteName>微信-凤凰网</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+		<cookie>wxb_fp_id=2635950222; pgv_pvi=9935390720; tencentSig=6184200192; _qddaz=QD.riaiuu.q411jq.j96e1net; visit-wxb-id=99ba6f60723f1fa63ef494394214f0f2; PHPSESSID=9l3c87p9at3b271haql0qpi774; wxb_fp_id=2635950222; 6aHW_e4af_saltkey=xNXV09gJ; 6aHW_e4af_lastvisit=1515025676; 6aHW_e4af_sid=SPPKJf; 6aHW_e4af_lastact=1515029276%09uc.php%09; 6aHW_e4af_auth=2570HBLo26Vc9Co0pNIhc19HbOzQCyM0ULIj9%2FUpKyFEnbNqYyO3amh21jMHT3Hh7h8hFgpCY4iCEu1Jt76XVkZqHw4; Hm_lvt_5859c7e2fd49a1739a0b0f5a28532d91=1513149954,1515028778; Hm_lpvt_5859c7e2fd49a1739a0b0f5a28532d91=1515029281</cookie>
+	</site>
+	
+	<site>
+		<siteName>微信-中国经济网</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+		<cookie>wxb_fp_id=2635950222; pgv_pvi=9935390720; tencentSig=6184200192; _qddaz=QD.riaiuu.q411jq.j96e1net; visit-wxb-id=99ba6f60723f1fa63ef494394214f0f2; PHPSESSID=9l3c87p9at3b271haql0qpi774; wxb_fp_id=2635950222; 6aHW_e4af_saltkey=xNXV09gJ; 6aHW_e4af_lastvisit=1515025676; 6aHW_e4af_sid=SPPKJf; 6aHW_e4af_lastact=1515029276%09uc.php%09; 6aHW_e4af_auth=2570HBLo26Vc9Co0pNIhc19HbOzQCyM0ULIj9%2FUpKyFEnbNqYyO3amh21jMHT3Hh7h8hFgpCY4iCEu1Jt76XVkZqHw4; Hm_lvt_5859c7e2fd49a1739a0b0f5a28532d91=1513149954,1515028778; Hm_lpvt_5859c7e2fd49a1739a0b0f5a28532d91=1515029281</cookie>
+	</site>
+	
+	<site>
+		<siteName>微信-观察者网</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+		<cookie>wxb_fp_id=2635950222; pgv_pvi=9935390720; tencentSig=6184200192; _qddaz=QD.riaiuu.q411jq.j96e1net; visit-wxb-id=99ba6f60723f1fa63ef494394214f0f2; PHPSESSID=9l3c87p9at3b271haql0qpi774; wxb_fp_id=2635950222; 6aHW_e4af_saltkey=xNXV09gJ; 6aHW_e4af_lastvisit=1515025676; 6aHW_e4af_sid=SPPKJf; 6aHW_e4af_lastact=1515029276%09uc.php%09; 6aHW_e4af_auth=2570HBLo26Vc9Co0pNIhc19HbOzQCyM0ULIj9%2FUpKyFEnbNqYyO3amh21jMHT3Hh7h8hFgpCY4iCEu1Jt76XVkZqHw4; Hm_lvt_5859c7e2fd49a1739a0b0f5a28532d91=1513149954,1515028778; Hm_lpvt_5859c7e2fd49a1739a0b0f5a28532d91=1515029281</cookie>
+	</site>
+	
+	<site>
+		<siteName>微信-暴走漫画</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+		<cookie>wxb_fp_id=2635950222; pgv_pvi=9935390720; tencentSig=6184200192; _qddaz=QD.riaiuu.q411jq.j96e1net; visit-wxb-id=99ba6f60723f1fa63ef494394214f0f2; PHPSESSID=9l3c87p9at3b271haql0qpi774; wxb_fp_id=2635950222; 6aHW_e4af_saltkey=xNXV09gJ; 6aHW_e4af_lastvisit=1515025676; 6aHW_e4af_sid=SPPKJf; 6aHW_e4af_lastact=1515029276%09uc.php%09; 6aHW_e4af_auth=2570HBLo26Vc9Co0pNIhc19HbOzQCyM0ULIj9%2FUpKyFEnbNqYyO3amh21jMHT3Hh7h8hFgpCY4iCEu1Jt76XVkZqHw4; Hm_lvt_5859c7e2fd49a1739a0b0f5a28532d91=1513149954,1515028778; Hm_lpvt_5859c7e2fd49a1739a0b0f5a28532d91=1515029281</cookie>
+	</site>
+	
+	<site>
+		<siteName>微信-南宁铁路局</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+		<cookie>wxb_fp_id=2635950222; pgv_pvi=9935390720; tencentSig=6184200192; _qddaz=QD.riaiuu.q411jq.j96e1net; visit-wxb-id=99ba6f60723f1fa63ef494394214f0f2; PHPSESSID=9l3c87p9at3b271haql0qpi774; wxb_fp_id=2635950222; 6aHW_e4af_saltkey=xNXV09gJ; 6aHW_e4af_lastvisit=1515025676; 6aHW_e4af_sid=SPPKJf; 6aHW_e4af_lastact=1515029276%09uc.php%09; 6aHW_e4af_auth=2570HBLo26Vc9Co0pNIhc19HbOzQCyM0ULIj9%2FUpKyFEnbNqYyO3amh21jMHT3Hh7h8hFgpCY4iCEu1Jt76XVkZqHw4; Hm_lvt_5859c7e2fd49a1739a0b0f5a28532d91=1513149954,1515028778; Hm_lpvt_5859c7e2fd49a1739a0b0f5a28532d91=1515029281</cookie>
+	</site>
+	
+	<site>
+		<siteName>微信-广西日报</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+		<cookie>wxb_fp_id=2635950222; pgv_pvi=9935390720; tencentSig=6184200192; _qddaz=QD.riaiuu.q411jq.j96e1net; visit-wxb-id=99ba6f60723f1fa63ef494394214f0f2; PHPSESSID=9l3c87p9at3b271haql0qpi774; wxb_fp_id=2635950222; 6aHW_e4af_saltkey=xNXV09gJ; 6aHW_e4af_lastvisit=1515025676; 6aHW_e4af_sid=SPPKJf; 6aHW_e4af_lastact=1515029276%09uc.php%09; 6aHW_e4af_auth=2570HBLo26Vc9Co0pNIhc19HbOzQCyM0ULIj9%2FUpKyFEnbNqYyO3amh21jMHT3Hh7h8hFgpCY4iCEu1Jt76XVkZqHw4; Hm_lvt_5859c7e2fd49a1739a0b0f5a28532d91=1513149954,1515028778; Hm_lpvt_5859c7e2fd49a1739a0b0f5a28532d91=1515029281</cookie>
+	</site>
+	
+	<site>
+		<siteName>微信-广西新闻网</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+		<cookie>wxb_fp_id=2635950222; pgv_pvi=9935390720; tencentSig=6184200192; _qddaz=QD.riaiuu.q411jq.j96e1net; visit-wxb-id=99ba6f60723f1fa63ef494394214f0f2; PHPSESSID=9l3c87p9at3b271haql0qpi774; wxb_fp_id=2635950222; 6aHW_e4af_saltkey=xNXV09gJ; 6aHW_e4af_lastvisit=1515025676; 6aHW_e4af_sid=SPPKJf; 6aHW_e4af_lastact=1515029276%09uc.php%09; 6aHW_e4af_auth=2570HBLo26Vc9Co0pNIhc19HbOzQCyM0ULIj9%2FUpKyFEnbNqYyO3amh21jMHT3Hh7h8hFgpCY4iCEu1Jt76XVkZqHw4; Hm_lvt_5859c7e2fd49a1739a0b0f5a28532d91=1513149954,1515028778; Hm_lpvt_5859c7e2fd49a1739a0b0f5a28532d91=1515029281</cookie>
+	</site>
+	
+	<site>
+		<siteName>微信-南宁新闻网</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+		<cookie>wxb_fp_id=2635950222; pgv_pvi=9935390720; tencentSig=6184200192; _qddaz=QD.riaiuu.q411jq.j96e1net; visit-wxb-id=99ba6f60723f1fa63ef494394214f0f2; PHPSESSID=9l3c87p9at3b271haql0qpi774; wxb_fp_id=2635950222; 6aHW_e4af_saltkey=xNXV09gJ; 6aHW_e4af_lastvisit=1515025676; 6aHW_e4af_sid=SPPKJf; 6aHW_e4af_lastact=1515029276%09uc.php%09; 6aHW_e4af_auth=2570HBLo26Vc9Co0pNIhc19HbOzQCyM0ULIj9%2FUpKyFEnbNqYyO3amh21jMHT3Hh7h8hFgpCY4iCEu1Jt76XVkZqHw4; Hm_lvt_5859c7e2fd49a1739a0b0f5a28532d91=1513149954,1515028778; Hm_lpvt_5859c7e2fd49a1739a0b0f5a28532d91=1515029281</cookie>
+	</site>
+	
+	<site>
+		<siteName>微信-南国早报</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+		<cookie>wxb_fp_id=2635950222; pgv_pvi=9935390720; tencentSig=6184200192; _qddaz=QD.riaiuu.q411jq.j96e1net; visit-wxb-id=99ba6f60723f1fa63ef494394214f0f2; PHPSESSID=9l3c87p9at3b271haql0qpi774; wxb_fp_id=2635950222; 6aHW_e4af_saltkey=xNXV09gJ; 6aHW_e4af_lastvisit=1515025676; 6aHW_e4af_sid=SPPKJf; 6aHW_e4af_lastact=1515029276%09uc.php%09; 6aHW_e4af_auth=2570HBLo26Vc9Co0pNIhc19HbOzQCyM0ULIj9%2FUpKyFEnbNqYyO3amh21jMHT3Hh7h8hFgpCY4iCEu1Jt76XVkZqHw4; Hm_lvt_5859c7e2fd49a1739a0b0f5a28532d91=1513149954,1515028778; Hm_lpvt_5859c7e2fd49a1739a0b0f5a28532d91=1515029281</cookie>
+	</site>
+	
+	<site>
+		<siteName>微信-南宁日报</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+		<cookie>wxb_fp_id=2635950222; pgv_pvi=9935390720; tencentSig=6184200192; _qddaz=QD.riaiuu.q411jq.j96e1net; visit-wxb-id=99ba6f60723f1fa63ef494394214f0f2; PHPSESSID=9l3c87p9at3b271haql0qpi774; wxb_fp_id=2635950222; 6aHW_e4af_saltkey=xNXV09gJ; 6aHW_e4af_lastvisit=1515025676; 6aHW_e4af_sid=SPPKJf; 6aHW_e4af_lastact=1515029276%09uc.php%09; 6aHW_e4af_auth=2570HBLo26Vc9Co0pNIhc19HbOzQCyM0ULIj9%2FUpKyFEnbNqYyO3amh21jMHT3Hh7h8hFgpCY4iCEu1Jt76XVkZqHw4; Hm_lvt_5859c7e2fd49a1739a0b0f5a28532d91=1513149954,1515028778; Hm_lpvt_5859c7e2fd49a1739a0b0f5a28532d91=1515029281</cookie>
+	</site>
+	
+	<site>
+		<siteName>微信-南宁电视台</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+		<cookie>wxb_fp_id=2635950222; pgv_pvi=9935390720; tencentSig=6184200192; _qddaz=QD.riaiuu.q411jq.j96e1net; visit-wxb-id=99ba6f60723f1fa63ef494394214f0f2; PHPSESSID=9l3c87p9at3b271haql0qpi774; wxb_fp_id=2635950222; 6aHW_e4af_saltkey=xNXV09gJ; 6aHW_e4af_lastvisit=1515025676; 6aHW_e4af_sid=SPPKJf; 6aHW_e4af_lastact=1515029276%09uc.php%09; 6aHW_e4af_auth=2570HBLo26Vc9Co0pNIhc19HbOzQCyM0ULIj9%2FUpKyFEnbNqYyO3amh21jMHT3Hh7h8hFgpCY4iCEu1Jt76XVkZqHw4; Hm_lvt_5859c7e2fd49a1739a0b0f5a28532d91=1513149954,1515028778; Hm_lpvt_5859c7e2fd49a1739a0b0f5a28532d91=1515029281</cookie>
+	</site>
+	
+	<site>
+		<siteName>微信-930老友记</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+		<cookie>wxb_fp_id=2635950222; pgv_pvi=9935390720; tencentSig=6184200192; _qddaz=QD.riaiuu.q411jq.j96e1net; visit-wxb-id=99ba6f60723f1fa63ef494394214f0f2; PHPSESSID=9l3c87p9at3b271haql0qpi774; wxb_fp_id=2635950222; 6aHW_e4af_saltkey=xNXV09gJ; 6aHW_e4af_lastvisit=1515025676; 6aHW_e4af_sid=SPPKJf; 6aHW_e4af_lastact=1515029276%09uc.php%09; 6aHW_e4af_auth=2570HBLo26Vc9Co0pNIhc19HbOzQCyM0ULIj9%2FUpKyFEnbNqYyO3amh21jMHT3Hh7h8hFgpCY4iCEu1Jt76XVkZqHw4; Hm_lvt_5859c7e2fd49a1739a0b0f5a28532d91=1513149954,1515028778; Hm_lpvt_5859c7e2fd49a1739a0b0f5a28532d91=1515029281</cookie>
+	</site>
+	<site>
+		<siteName>微信-南宁圈</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+		<cookie>wxb_fp_id=2635950222; pgv_pvi=9935390720; tencentSig=6184200192; _qddaz=QD.riaiuu.q411jq.j96e1net; visit-wxb-id=99ba6f60723f1fa63ef494394214f0f2; PHPSESSID=9l3c87p9at3b271haql0qpi774; wxb_fp_id=2635950222; 6aHW_e4af_saltkey=xNXV09gJ; 6aHW_e4af_lastvisit=1515025676; 6aHW_e4af_sid=SPPKJf; 6aHW_e4af_lastact=1515029276%09uc.php%09; 6aHW_e4af_auth=2570HBLo26Vc9Co0pNIhc19HbOzQCyM0ULIj9%2FUpKyFEnbNqYyO3amh21jMHT3Hh7h8hFgpCY4iCEu1Jt76XVkZqHw4; Hm_lvt_5859c7e2fd49a1739a0b0f5a28532d91=1513149954,1515028778; Hm_lpvt_5859c7e2fd49a1739a0b0f5a28532d91=1515029281</cookie>
+	</site>
+	
+	<site>
+		<siteName>微信-二更</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+		<cookie>wxb_fp_id=2635950222; pgv_pvi=9935390720; tencentSig=6184200192; _qddaz=QD.riaiuu.q411jq.j96e1net; visit-wxb-id=99ba6f60723f1fa63ef494394214f0f2; PHPSESSID=9l3c87p9at3b271haql0qpi774; wxb_fp_id=2635950222; 6aHW_e4af_saltkey=xNXV09gJ; 6aHW_e4af_lastvisit=1515025676; 6aHW_e4af_sid=SPPKJf; 6aHW_e4af_lastact=1515029276%09uc.php%09; 6aHW_e4af_auth=2570HBLo26Vc9Co0pNIhc19HbOzQCyM0ULIj9%2FUpKyFEnbNqYyO3amh21jMHT3Hh7h8hFgpCY4iCEu1Jt76XVkZqHw4; Hm_lvt_5859c7e2fd49a1739a0b0f5a28532d91=1513149954,1515028778; Hm_lpvt_5859c7e2fd49a1739a0b0f5a28532d91=1515029281</cookie>
+	</site>
+	
+	<site>
+		<siteName>微信-喜号</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+		<cookie>wxb_fp_id=2635950222; pgv_pvi=9935390720; tencentSig=6184200192; _qddaz=QD.riaiuu.q411jq.j96e1net; visit-wxb-id=99ba6f60723f1fa63ef494394214f0f2; PHPSESSID=9l3c87p9at3b271haql0qpi774; wxb_fp_id=2635950222; 6aHW_e4af_saltkey=xNXV09gJ; 6aHW_e4af_lastvisit=1515025676; 6aHW_e4af_sid=SPPKJf; 6aHW_e4af_lastact=1515029276%09uc.php%09; 6aHW_e4af_auth=2570HBLo26Vc9Co0pNIhc19HbOzQCyM0ULIj9%2FUpKyFEnbNqYyO3amh21jMHT3Hh7h8hFgpCY4iCEu1Jt76XVkZqHw4; Hm_lvt_5859c7e2fd49a1739a0b0f5a28532d91=1513149954,1515028778; Hm_lpvt_5859c7e2fd49a1739a0b0f5a28532d91=1515029281</cookie>
+	</site>
+	<site>
+		<siteName>微信-央视新闻</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+		<cookie>wxb_fp_id=2635950222; pgv_pvi=9935390720; tencentSig=6184200192; _qddaz=QD.riaiuu.q411jq.j96e1net; visit-wxb-id=99ba6f60723f1fa63ef494394214f0f2; PHPSESSID=9l3c87p9at3b271haql0qpi774; wxb_fp_id=2635950222; 6aHW_e4af_saltkey=xNXV09gJ; 6aHW_e4af_lastvisit=1515025676; 6aHW_e4af_sid=SPPKJf; 6aHW_e4af_lastact=1515029276%09uc.php%09; 6aHW_e4af_auth=2570HBLo26Vc9Co0pNIhc19HbOzQCyM0ULIj9%2FUpKyFEnbNqYyO3amh21jMHT3Hh7h8hFgpCY4iCEu1Jt76XVkZqHw4; Hm_lvt_5859c7e2fd49a1739a0b0f5a28532d91=1513149954,1515028778; Hm_lpvt_5859c7e2fd49a1739a0b0f5a28532d91=1515029281</cookie>
+	</site>
+	
+	<site>
+		<siteName>微信-北京时间</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+		<cookie>wxb_fp_id=2635950222; pgv_pvi=9935390720; tencentSig=6184200192; _qddaz=QD.riaiuu.q411jq.j96e1net; visit-wxb-id=99ba6f60723f1fa63ef494394214f0f2; PHPSESSID=9l3c87p9at3b271haql0qpi774; wxb_fp_id=2635950222; 6aHW_e4af_saltkey=xNXV09gJ; 6aHW_e4af_lastvisit=1515025676; 6aHW_e4af_sid=SPPKJf; 6aHW_e4af_lastact=1515029276%09uc.php%09; 6aHW_e4af_auth=2570HBLo26Vc9Co0pNIhc19HbOzQCyM0ULIj9%2FUpKyFEnbNqYyO3amh21jMHT3Hh7h8hFgpCY4iCEu1Jt76XVkZqHw4; Hm_lvt_5859c7e2fd49a1739a0b0f5a28532d91=1513149954,1515028778; Hm_lpvt_5859c7e2fd49a1739a0b0f5a28532d91=1515029281</cookie>
+	</site>
+	
+	<site>
+		<siteName>微信-梨视频</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+		<cookie>wxb_fp_id=2635950222; pgv_pvi=9935390720; tencentSig=6184200192; _qddaz=QD.riaiuu.q411jq.j96e1net; visit-wxb-id=99ba6f60723f1fa63ef494394214f0f2; PHPSESSID=9l3c87p9at3b271haql0qpi774; wxb_fp_id=2635950222; 6aHW_e4af_saltkey=xNXV09gJ; 6aHW_e4af_lastvisit=1515025676; 6aHW_e4af_sid=SPPKJf; 6aHW_e4af_lastact=1515029276%09uc.php%09; 6aHW_e4af_auth=2570HBLo26Vc9Co0pNIhc19HbOzQCyM0ULIj9%2FUpKyFEnbNqYyO3amh21jMHT3Hh7h8hFgpCY4iCEu1Jt76XVkZqHw4; Hm_lvt_5859c7e2fd49a1739a0b0f5a28532d91=1513149954,1515028778; Hm_lpvt_5859c7e2fd49a1739a0b0f5a28532d91=1515029281</cookie>
+	</site>
+	
+	<site>
+		<siteName>微信-新闻夜航</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+		<cookie>wxb_fp_id=2635950222; pgv_pvi=9935390720; tencentSig=6184200192; _qddaz=QD.riaiuu.q411jq.j96e1net; visit-wxb-id=99ba6f60723f1fa63ef494394214f0f2; PHPSESSID=9l3c87p9at3b271haql0qpi774; wxb_fp_id=2635950222; 6aHW_e4af_saltkey=xNXV09gJ; 6aHW_e4af_lastvisit=1515025676; 6aHW_e4af_sid=SPPKJf; 6aHW_e4af_lastact=1515029276%09uc.php%09; 6aHW_e4af_auth=2570HBLo26Vc9Co0pNIhc19HbOzQCyM0ULIj9%2FUpKyFEnbNqYyO3amh21jMHT3Hh7h8hFgpCY4iCEu1Jt76XVkZqHw4; Hm_lvt_5859c7e2fd49a1739a0b0f5a28532d91=1513149954,1515028778; Hm_lpvt_5859c7e2fd49a1739a0b0f5a28532d91=1515029281</cookie>
+	</site>
+	<site>
+		<siteName>微信-零点搞笑视频</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>PLUGINUNIT</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+		<cookie>wxb_fp_id=2635950222; pgv_pvi=9935390720; tencentSig=6184200192; _qddaz=QD.riaiuu.q411jq.j96e1net; visit-wxb-id=99ba6f60723f1fa63ef494394214f0f2; PHPSESSID=9l3c87p9at3b271haql0qpi774; wxb_fp_id=2635950222; 6aHW_e4af_saltkey=xNXV09gJ; 6aHW_e4af_lastvisit=1515025676; 6aHW_e4af_sid=SPPKJf; 6aHW_e4af_lastact=1515029276%09uc.php%09; 6aHW_e4af_auth=2570HBLo26Vc9Co0pNIhc19HbOzQCyM0ULIj9%2FUpKyFEnbNqYyO3amh21jMHT3Hh7h8hFgpCY4iCEu1Jt76XVkZqHw4; Hm_lvt_5859c7e2fd49a1739a0b0f5a28532d91=1513149954,1515028778; Hm_lpvt_5859c7e2fd49a1739a0b0f5a28532d91=1515029281</cookie>
+	</site>
+	<site>
+		<siteName>微博-人民日报</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	
+	<site>
+		<siteName>微博-央视新闻</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	
+	<site>
+		<siteName>微博-南宁警方栏目</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-南宁消防</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-看看新闻KNEWS</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-公安部打四黑除四害</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-新浪广西</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-中国之声</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-广西新闻网</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-广西新闻频道</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-南宁铁路</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-扬子晚报</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-北京青年报</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-猫扑</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-成都商报</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-中国政府网</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-新华网</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-南宁微博头条</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-羊城晚报</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-梨视频</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-南宁电视台</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-现代快报</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-广西交警</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-广西电台私家车930</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-广州日报</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-中央人民广播电台</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	
+	<site>
+		<siteName>微博-1074交通台</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	
+	<site>
+		<siteName>微博-楚天都市报</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-南国早报</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-时空网</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>微博-南宁晚报</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>2000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<cookie>SUB=_2AkMvDs14f8NhqwJRmP4WzG_ra4t3ywzEieLBAH7sJRMxHRl-yT83qksStRAX4xWr5WYAlatFlAv61x2JTytN5Q..; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WWVX0hAu0Y1iIjHj_J-7G_T; SINAGLOBAL=4914179113852.886.1481789052406; UOR=ts.21cn.com ,widget.weibo.com ,www.baidu.com ; login_sid_t=1f41a2bce61d159aeb9728f423b7d15f; YF-Ugrow-G0=1eba44dbebf62c27ae66e16d40e02964; YF-V5-G0=dc2e98bae9c8f3ecec40249231d366d6; _s_tentry=-; Apache=7038194591203.153.1483597187870; ULV=1483597187881:4:2:2:7038194591203.153.1483</cookie>
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	
+	<site>
+		<siteName>清博指数</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>3000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	
+	<site>
+		<siteName>虎扑体育</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>3000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+	<site>
+		<siteName>央视网</siteName><!-- 站点名称,不可为空 -->
+		<host></host><!-- host，可为空 -->
+		<sleep>3000</sleep><!-- 休眠时间（单位毫秒）,可为空，默认3000ms -->
+		<timeOut>10000</timeOut><!-- 超时时间（单位毫秒），可为空，默认10000ms -->
+		<userAgent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</userAgent><!-- userAgent，可为空，默认谷歌浏览器 -->
+		<queueAddress>remote</queueAddress><!-- 队列地址，local本地队列，remote暂时为redis，可为空，默认remote -->
+		<seedDedup>false</seedDedup><!-- 种子页是否判重，true,false ,可为空，默认true-->
+		<detailDedup>true</detailDedup><!-- 详情页是否判重，true，false -->
+		<cycleRetryTimes>3</cycleRetryTimes><!-- 重试次数,放入队列重新爬取 ,可为空，默认3次-->
+		<retryTimes>3</retryTimes><!-- 重试次数,直接重试 ,可为空，默认3次-->
+		<downloadType>HTTP</downloadType><!-- 下载类型，HTTP,firefox,默认为HTTPclient下载，-->
+		<charset></charset><!-- 网页解码格式，可为空，默认从网页提取解码格式 -->
+	</site>
+</root>
