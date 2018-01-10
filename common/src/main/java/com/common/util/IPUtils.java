@@ -36,7 +36,6 @@ public abstract class IPUtils {
                 }
             }
         }
-
         return localAddress.getHostAddress();
     }
     
