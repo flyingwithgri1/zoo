@@ -10,5 +10,6 @@ public class JedisUtilTest {
     public void test2(){
         ApplicationContext context = new ClassPathXmlApplicationContext("classpath*:common.xml");
         JedisUtil jedis = (JedisUtil) context.getBean("jedisUtil");
+        jedis.hset("d","d","d");
     }
 }

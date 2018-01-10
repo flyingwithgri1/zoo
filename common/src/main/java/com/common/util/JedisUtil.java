@@ -2,764 +2,536 @@ package com.common.util;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
 @Service
+/*
+ *
+ * 基于spring和redis的redisTemplate工具类
+ * 针对所有的hash 都是以h开头的方法
+ * 针对所有的Set 都是以s开头的方法                    不含通用方法
+ * 针对所有的List 都是以l开头的方法
+ */
 public class JedisUtil {
-	private static JedisPool jedisPool;
-	private static Object lock = new Object();
-	public String host = "";
-	public int port = 0;
-	static {
-		synchronized (lock) {
-			if(jedisPool == null){
-				JedisPoolConfig config = new JedisPoolConfig();
-				config.setMaxIdle(2000);
-				config.setMaxWaitMillis(2000l);
-				config.setTestOnBorrow(true);
-				config.setTestOnReturn(true);
-				config.setTestWhileIdle(true);
-				config.setMinEvictableIdleTimeMillis(60000l);
-				config.setTimeBetweenEvictionRunsMillis(3000l);
-				config.setNumTestsPerEvictionRun(-1);
-				jedisPool = new JedisPool(config, "",0 ,60000);
-				/*i}else{
-					jedisPool = new JedisPool(config, SpiderConfig.redisHost,SpiderConfig.redisPort,60000,SpiderConfig.redisPassword);
-				}*/
+
+
+	private RedisTemplate<String, Object> redisTemplate;
+
+	public void setRedisTemplate(RedisTemplate<String, Object> redisTemplate) {
+		this.redisTemplate = redisTemplate;
+	}
+	//=============================common============================
+	/**
+	 * 指定缓存失效时间
+	 * @param key 键
+	 * @param time 时间(秒)
+	 * @return
+	 */
+	public boolean expire(String key,long time){
+		try {
+			if(time>0){
+				redisTemplate.expire(key, time, TimeUnit.SECONDS);
+			}
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	/**
+	 * 根据key 获取过期时间
+	 * @param key 键 不能为null
+	 * @return 时间(秒) 返回0代表为永久有效
+	 */
+	public long getExpire(String key){
+		return redisTemplate.getExpire(key,TimeUnit.SECONDS);
+	}
+
+	/**
+	 * 判断key是否存在
+	 * @param key 键
+	 * @return true 存在 false不存在
+	 */
+	public boolean hasKey(String key){
+		try {
+			return redisTemplate.hasKey(key);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	/**
+	 * 删除缓存
+	 * @param key 可以传一个值 或多个
+	 */
+	@SuppressWarnings("unchecked")
+	public void del(String ... key){
+		if(key!=null&&key.length>0){
+			if(key.length==1){
+				redisTemplate.delete(key[0]);
+			}else{
+				redisTemplate.delete(CollectionUtils.arrayToList(key));
 			}
 		}
-		
 	}
-	
+
+	//============================String=============================
 	/**
-	 *
-	 * @param jedis
-    */
-	public static void close(Jedis jedis) {
+	 * 普通缓存获取
+	 * @param key 键
+	 * @return 值
+	 */
+	public Object get(String key){
+		return key==null?null:redisTemplate.opsForValue().get(key);
+	}
+
+	/**
+	 * 普通缓存放入
+	 * @param key 键
+	 * @param value 值
+	 * @return true成功 false失败
+	 */
+	public boolean set(String key,Object value) {
 		try {
-			if(jedis == null){return;}
-			jedis.close();
+			redisTemplate.opsForValue().set(key, value);
+			return true;
 		} catch (Exception e) {
-			if (jedis.isConnected()) {
-				jedis.quit();
-				jedis.disconnect();
+			e.printStackTrace();
+			return false;
+		}
+
+	}
+
+	/**
+	 * 普通缓存放入并设置时间
+	 * @param key 键
+	 * @param value 值
+	 * @param time 时间(秒) time要大于0 如果time小于等于0 将设置无限期
+	 * @return true成功 false 失败
+	 */
+	public boolean set(String key,Object value,long time){
+		try {
+			if(time>0){
+				redisTemplate.opsForValue().set(key, value, time, TimeUnit.SECONDS);
+			}else{
+				set(key, value);
 			}
-		}
-		try {
-			Thread.sleep(100L);
-		} catch (InterruptedException e) {
+			return true;
+		} catch (Exception e) {
 			e.printStackTrace();
+			return false;
 		}
 	}
-	
+
 	/**
-	 *
-	 */
-	public static Jedis getResource(){
-		return jedisPool.getResource();
-	}
-	
-	/**
-	 * 获取数据
-	 * @param key
+	 * 递增
+	 * @param key 键
+	 * @param delta 要增加几(大于0)
 	 * @return
 	 */
-	public static String get(String key, int index) {
-		String value = null;
-		Jedis jedis = null;
-		try {
-			jedis = getResource();
-			jedis.select(index);
-			value = jedis.get(key);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			close(jedis);
+	public long incr(String key, long delta){
+		if(delta<0){
+			throw new RuntimeException("递增因子必须大于0");
 		}
-		return value;
+		return redisTemplate.opsForValue().increment(key, delta);
 	}
 
 	/**
-	 * 获取数据
-	 *
-	 * @param key
+	 * 递减
+	 * @param key 键
+	 * @param delta 要减少几(小于0)
 	 * @return
 	 */
-	public static byte[] get(byte[] key, int index) {
-		byte[] value = null;
-		Jedis jedis = null;
-		try {
-			jedis = getResource();
-			jedis.select(index);
-			value = jedis.get(key);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			close(jedis);
+	public long decr(String key, long delta){
+		if(delta<0){
+			throw new RuntimeException("递减因子必须大于0");
 		}
-		return value;
+		return redisTemplate.opsForValue().increment(key, -delta);
+	}
+
+	//================================Map=================================
+	/**
+	 * HashGet
+	 * @param key 键 不能为null
+	 * @param item 项 不能为null
+	 * @return 值
+	 */
+	public Object hget(String key,String item){
+		return redisTemplate.opsForHash().get(key, item);
 	}
 
 	/**
-	 *
-	 * @param key
-	 * @param value
-	 * @param index
-     */
-	public static void set(byte[] key, byte[] value, int index) {
-		Jedis jedis = null;
-		try {
-			jedis = getResource();
-			jedis.select(index);
-			jedis.set(key, value);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			close(jedis);
-		}
+	 * 获取hashKey对应的所有键值
+	 * @param key 键
+	 * @return 对应的多个键值
+	 */
+	public Map<Object,Object> hmget(String key){
+		return redisTemplate.opsForHash().entries(key);
 	}
-	
+
 	/**
-	 *
-	 * @param key
-	 * @param value
-	 * @param index
-    */
-	public static void set(String key, String value, int index) {
-		Jedis jedis = null;
+	 * HashSet
+	 * @param key 键
+	 * @param map 对应多个键值
+	 * @return true 成功 false 失败
+	 */
+	public boolean hmset(String key, Map<String,Object> map){
 		try {
-			jedis = getResource();
-			jedis.select(index);
-			jedis.set(key, value);
+			redisTemplate.opsForHash().putAll(key, map);
+			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			close(jedis);
+			return false;
 		}
 	}
 
 	/**
-	 *
-	 * @param key
-	 * @param value
-	 * @param time
-     * @param index
-     */
-	public static void set(byte[] key, byte[] value, int time, int index) {
-		Jedis jedis = null;
+	 * HashSet 并设置时间
+	 * @param key 键
+	 * @param map 对应多个键值
+	 * @param time 时间(秒)
+	 * @return true成功 false失败
+	 */
+	public boolean hmset(String key, Map<String,Object> map, long time){
 		try {
-			jedis = getResource();
-			jedis.select(index);
-			jedis.set(key, value);
-			jedis.expire(key, time);
+			redisTemplate.opsForHash().putAll(key, map);
+			if(time>0){
+				expire(key, time);
+			}
+			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			close(jedis);
-		}
-	}
-	
-	/**
-	 *
-	 * @param key
-	 * @param value
-	 * @param time
-    * @param index
-    */
-	public static void set(String key, String value, int time, int index) {
-		Jedis jedis = null;
-		try {
-			jedis = getResource();
-			jedis.select(index);
-			jedis.set(key, value);
-			jedis.expire(key, time);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			close(jedis);
+			return false;
 		}
 	}
 
 	/**
-	 *
-	 * @param key
-	 * @param field
-	 * @param value
-     * @param index
-     */
-	public static void hset(byte[] key, byte[] field, byte[] value, int index) {
-		Jedis jedis = null;
+	 * 向一张hash表中放入数据,如果不存在将创建
+	 * @param key 键
+	 * @param item 项
+	 * @param value 值
+	 * @return true 成功 false失败
+	 */
+	public boolean hset(String key,String item,Object value) {
 		try {
-			jedis = getResource();
-			jedis.select(index);
-			jedis.hset(key, field, value);
+			redisTemplate.opsForHash().put(key, item, value);
+			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			close(jedis);
+			return false;
 		}
 	}
 
 	/**
-	 *
-	 * @param key
-	 * @param field
-	 * @param value
-     * @param index
-     */
-	public static void hset(String key, String field, String value, int index) {
-		Jedis jedis = null;
+	 * 向一张hash表中放入数据,如果不存在将创建
+	 * @param key 键
+	 * @param item 项
+	 * @param value 值
+	 * @param time 时间(秒)  注意:如果已存在的hash表有时间,这里将会替换原有的时间
+	 * @return true 成功 false失败
+	 */
+	public boolean hset(String key,String item,Object value,long time) {
 		try {
-			jedis = getResource();
-			jedis.select(index);
-			jedis.hset(key, field, value);
+			redisTemplate.opsForHash().put(key, item, value);
+			if(time>0){
+				expire(key, time);
+			}
+			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			//返还到连接池
-			close(jedis);
+			return false;
 		}
 	}
+
 	/**
-	 * 获取数据
-	 *
-	 * @param key
+	 * 删除hash表中的值
+	 * @param key 键 不能为null
+	 * @param item 项 可以使多个 不能为null
+	 */
+	public void hdel(String key, Object... item){
+		redisTemplate.opsForHash().delete(key,item);
+	}
+
+	/**
+	 * 判断hash表中是否有该项的值
+	 * @param key 键 不能为null
+	 * @param item 项 不能为null
+	 * @return true 存在 false不存在
+	 */
+	public boolean hHasKey(String key, String item){
+		return redisTemplate.opsForHash().hasKey(key, item);
+	}
+
+	/**
+	 * hash递增 如果不存在,就会创建一个 并把新增后的值返回
+	 * @param key 键
+	 * @param item 项
+	 * @param by 要增加几(大于0)
 	 * @return
 	 */
-	public static String hget(String key, String field, int index) {
-		String value = null;
-		Jedis jedis = null;
-		try {
-			jedis = getResource();
-			jedis.select(index);
-			value = jedis.hget(key, field);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			close(jedis);
-		}
-		return value;
+	public double hincr(String key, String item,double by){
+		return redisTemplate.opsForHash().increment(key, item, by);
 	}
+
 	/**
-	 * 获取数据
-	 *
-	 * @param key
+	 * hash递减
+	 * @param key 键
+	 * @param item 项
+	 * @param by 要减少记(小于0)
 	 * @return
 	 */
-	public static byte[] hget(byte[] key, byte[] field, int index) {
-		byte[] value = null;
-		Jedis jedis = null;
-		try {
-			jedis = getResource();
-			jedis.select(index);
-			value = jedis.hget(key, field);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			//返还到连接池
-			close(jedis);
-		}
-		return value;
+	public double hdecr(String key, String item,double by){
+		return redisTemplate.opsForHash().increment(key, item,-by);
 	}
 
+	//============================set=============================
 	/**
-	 *
-	 * @param key
-	 * @param field
-	 * @param index
-     */
-	public static void hdel(byte[] key, byte[] field, int index) {
-		Jedis jedis = null;
-		try {
-			jedis = getResource();
-			jedis.select(index);
-			jedis.hdel(key, field);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			close(jedis);
-		}
-	}
-	
-	/**
-	 *
-	 * @param key
-	 * @param field
-	 * @param index
-    */
-	public static void hdel(String key, String field, int index) {
-		Jedis jedis = null;
-		try {
-			jedis = getResource();
-			jedis.select(index);
-			jedis.hdel(key, field);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			close(jedis);
-		}
-	}
-	
-	/**
-	 * 存储REDIS队列 顺序存储
-	 * @param //byte[] key reids键名
-	 * @param //byte[] value 键值
-	 */
-	public static void lpush(byte[] key, byte[] value, int index) {
-		Jedis jedis = null;
-		try {
-			jedis = getResource();
-			jedis.select(index);
-			jedis.lpush(key, value);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			close(jedis);
-		}
-	}
-	/**
-	 * 存储REDIS队列 顺序存储
-	 * @param key reids键名
-	 * @param value 键值
-	 */
-	public static void lpush(String key, String value, int index) {
-		Jedis jedis = null;
-		try {
-			jedis = getResource();
-			jedis.select(index);
-			jedis.lpush(key, value);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			close(jedis);
-		}
-	}
-	
-	/**
-	 * 存储REDIS队列 反向存储
-	 * @param key reids键名
-	 * @param value 键值
-	 */
-	public static void rpush(byte[] key, byte[] value, int index) {
-		Jedis jedis = null;
-		try {
-			jedis = getResource();
-			jedis.select(index);
-			jedis.rpush(key, value);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			close(jedis);
-		}
-	}
-	
-	/**
-	 * 存储REDIS队列 反向存储
-	 * @param key reids键名
-	 * @param value 键值
-	 */
-	public static void rpush(String key, String value, int index) {
-		Jedis jedis = null;
-		try {
-			jedis = getResource();
-			jedis.select(index);
-			jedis.rpush(key, value);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			close(jedis);
-		}
-	}
-	
-	/**
-	 * 将列表 source 中的最后一个元素(尾元素)弹出，并返回给客户端
-	 * @param  key reids键名
-	 * @param  destination 键值
-	 */
-	public static void rpoplpush(byte[] key, byte[] destination, int index) {
-		Jedis jedis = null;
-		try {
-			jedis = getResource();
-			jedis.select(index);
-			jedis.rpoplpush(key, destination);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			close(jedis);
-		}
-	}
-	
-	/**
-	 * 将列表 source 中的最后一个元素(尾元素)弹出，并返回给客户端
-	 * @param key reids键名
-	 * @param destination 键值
-	 */
-	public static void rpoplpush(String key, String destination, int index) {
-		Jedis jedis = null;
-		try {
-			jedis = getResource();
-			jedis.select(index);
-			jedis.rpoplpush(key, destination);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			close(jedis);
-		}
-	}
-	
-	/**
-	 * 获取队列数据
-	 * @param key 键名
+	 * 根据key获取Set中的所有值
+	 * @param key 键
 	 * @return
 	 */
-	public static List<byte[]> lrange(byte[] key, int index) {
-		List<byte[]> list = null;
-		Jedis jedis = null;
+	public Set<Object> sGet(String key){
 		try {
-			jedis = getResource();
-			jedis.select(index);
-			list = jedis.lrange(key, 0, -1);
+			return redisTemplate.opsForSet().members(key);
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			close(jedis);
+			return null;
 		}
-		return list;
 	}
-	
+
 	/**
-	 * 获取队列数据
-	 * @param key 键名
+	 * 根据value从一个set中查询,是否存在
+	 * @param key 键
+	 * @param value 值
+	 * @return true 存在 false不存在
+	 */
+	public boolean sHasKey(String key,Object value){
+		try {
+			return redisTemplate.opsForSet().isMember(key, value);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	/**
+	 * 将数据放入set缓存
+	 * @param key 键
+	 * @param values 值 可以是多个
+	 * @return 成功个数
+	 */
+	public long sSet(String key, Object...values) {
+		try {
+			return redisTemplate.opsForSet().add(key, values);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return 0;
+		}
+	}
+
+	/**
+	 * 将set数据放入缓存
+	 * @param key 键
+	 * @param time 时间(秒)
+	 * @param values 值 可以是多个
+	 * @return 成功个数
+	 */
+	public long sSetAndTime(String key,long time,Object...values) {
+		try {
+			Long count = redisTemplate.opsForSet().add(key, values);
+			if(time>0) expire(key, time);
+			return count;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return 0;
+		}
+	}
+
+	/**
+	 * 获取set缓存的长度
+	 * @param key 键
 	 * @return
 	 */
-	public static List<String> lrange(String key, int index) {
-		List<String> list = null;
-		Jedis jedis = null;
+	public long sGetSetSize(String key){
 		try {
-			jedis = getResource();
-			jedis.select(index);
-			list = jedis.lrange(key, 0, -1);
+			return redisTemplate.opsForSet().size(key);
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			close(jedis);
+			return 0;
 		}
-		return list;
 	}
-	
+
 	/**
-	 * 获取队列数据
-	 * @param key 键名
+	 * 移除值为value的
+	 * @param key 键
+	 * @param values 值 可以是多个
+	 * @return 移除的个数
+	 */
+	public long setRemove(String key, Object ...values) {
+		try {
+			Long count = redisTemplate.opsForSet().remove(key, values);
+			return count;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return 0;
+		}
+	}
+	//===============================list=================================
+
+	/**
+	 * 获取list缓存的内容
+	 * @param key 键
+	 * @param start 开始
+	 * @param end 结束  0 到 -1代表所有值
 	 * @return
 	 */
-	public static byte[] rpop(byte[] key, int index) {
-		byte[] bytes = null;
-		Jedis jedis = null;
+	public List<Object> lGet(String key,long start, long end){
 		try {
-			jedis = getResource();
-			jedis.select(index);
-			bytes = jedis.rpop(key);
+			return redisTemplate.opsForList().range(key, start, end);
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			close(jedis);
+			return null;
 		}
-		return bytes;
 	}
+
 	/**
-	 * 获取队列数据
-	 * @param key 键名
+	 * 获取list缓存的长度
+	 * @param key 键
 	 * @return
 	 */
-	public static String rpop(String key, int index) {
-		String bytes = null;
-		Jedis jedis = null;
+	public long lGetListSize(String key){
 		try {
-			jedis = getResource();
-			jedis.select(index);
-			bytes = jedis.rpop(key);
+			return redisTemplate.opsForList().size(key);
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			close(jedis);
-		}
-		return bytes;
-	}
-
-	/**
-	 * 向hash中添加数据
-	 * @param key
-	 * @param hash
-	 * @param index
-     */
-	public static void hmset(Object key, Map<String, String> hash, int index) {
-		Jedis jedis = null;
-		try {
-			jedis = getResource();
-			jedis.select(index);
-			jedis.hmset(key.toString(), hash);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			close(jedis);
+			return 0;
 		}
 	}
 
 	/**
-	 *
-	 * @param key
-	 * @param hash
-	 * @param time
-     * @param index
-     */
-	public static void hmset(Object key, Map<String, String> hash, int time, int index) {
-		Jedis jedis = null;
+	 * 通过索引 获取list中的值
+	 * @param key 键
+	 * @param index 索引  index>=0时， 0 表头，1 第二个元素，依次类推；index<0时，-1，表尾，-2倒数第二个元素，依次类推
+	 * @return
+	 */
+	public Object lGetIndex(String key,long index){
 		try {
-			jedis = getResource();
-			jedis.select(index);
-			jedis.hmset(key.toString(), hash);
-			jedis.expire(key.toString(), time);
+			return redisTemplate.opsForList().index(key, index);
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			close(jedis);
+			return null;
 		}
 	}
 
 	/**
-	 * 获取数据
-	 * @param key
-	 * @param index
-	 * @param fields
-     * @return
-     */
-	public static List<String> hmget(Object key, int index, String... fields) {
-		List<String> result = null;
-		Jedis jedis = null;
+	 * 将list放入缓存
+	 * @param key 键
+	 * @param value 值
+	 * @return
+	 */
+	public boolean lSet(String key, Object value) {
 		try {
-			jedis = getResource();
-			jedis.select(index);
-			result = jedis.hmget(key.toString(), fields);
+			redisTemplate.opsForList().rightPush(key, value);
+			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			close(jedis);
-		}
-		return result;
-	}
-
-	/**
-	 *
-	 * @param key
-	 * @param index
-     * @return
-     */
-	public static Set<String> hkeys(String key, int index) {
-		Set<String> result = null;
-		Jedis jedis = null;
-		try {
-			jedis = getResource();
-			jedis.select(index);
-			result = jedis.hkeys(key);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			close(jedis);
-		}
-		return result;
-	}
-
-	/**
-	 *
-	 * @param key
-	 * @param from
-	 * @param to
-	 * @param index
-     * @return
-     */
-	public static List<byte[]> lrange(byte[] key, int from, int to, int index) {
-		List<byte[]> result = null;
-		Jedis jedis = null;
-		try {
-			jedis = getResource();
-			jedis.select(index);
-			result = jedis.lrange(key, from, to);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			close(jedis);
-		}
-		return result;
-	}
-	
-	/**
-	 *
-	 * @param key
-	 * @param from
-	 * @param to
-	 * @param index
-    * @return
-    */
-	public static List<String> lrange(String key, int from, int to, int index) {
-		List<String> result = null;
-		Jedis jedis = null;
-		try {
-			jedis = getResource();
-			jedis.select(index);
-			result = jedis.lrange(key, from, to);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			close(jedis);
-		}
-		return result;
-	}
-	
-
-	/**
-	 *
-	 * @param key
-	 * @param index
-     * @return
-     */
-	public static Map<byte[], byte[]> hgetAll(byte[] key, int index) {
-		Map<byte[], byte[]> result = null;
-		Jedis jedis = null;
-		try {
-			jedis = getResource();
-			jedis.select(index);
-			result = jedis.hgetAll(key);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			close(jedis);
-		}
-		return result;
-	}
-	
-	/**
-	 *
-	 * @param key
-	 * @param index
-    * @return
-    */
-	public static Map<String, String> hgetAll(String key, int index) {
-		Map<String, String> result = null;
-		Jedis jedis = null;
-		try {
-			jedis = getResource();
-			jedis.select(index);
-			result = jedis.hgetAll(key);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			close(jedis);
-		}
-		return result;
-	}
-
-	/**
-	 *
-	 * @param key
-	 * @param index
-     */
-	public static void del(byte[] key, int index) {
-		Jedis jedis = null;
-		try {
-			jedis = getResource();
-			jedis.select(index);
-			jedis.del(key);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			close(jedis);
-		}
-	}
-	
-	/**
-	 *
-	 * @param key
-	 * @param index
-    */
-	public static void del(String key, int index) {
-		Jedis jedis = null;
-		try {
-			jedis = getResource();
-			jedis.select(index);
-			jedis.del(key);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			close(jedis);
+			return false;
 		}
 	}
 
 	/**
-	 *
-	 * @param key
-	 * @param index
-     * @return
-     */
-	public static long llen(byte[] key, int index) {
-		long len = 0;
-		Jedis jedis = null;
+	 * 将list放入缓存
+	 * @param key 键
+	 * @param value 值
+	 * @param time 时间(秒)
+	 * @return
+	 */
+	public boolean lSet(String key, Object value, long time) {
 		try {
-			jedis = getResource();
-			jedis.select(index);
-			jedis.llen(key);
+			redisTemplate.opsForList().rightPush(key, value);
+			if (time > 0) expire(key, time);
+			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			close(jedis);
+			return false;
 		}
-		return len;
-	}
-	
-	/**
-	 *
-	 * @param key
-	 * @param index
-    * @return
-    */
-	public static long llen(String key, int index) {
-		long len = 0;
-		Jedis jedis = null;
-		try {
-			jedis = getResource();
-			jedis.select(index);
-			jedis.llen(key);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			close(jedis);
-		}
-		return len;
 	}
 
 	/**
-	 *
-	 * @param key
-	 * @param fieldName
-	 * @param index
-     * @return
-     */
-	public static boolean hexists(String key, String fieldName, int index) {
-		Jedis jedis = null;
-		Boolean isIn = false;
+	 * 将list放入缓存
+	 * @param key 键
+	 * @param value 值
+	 * @return
+	 */
+	public boolean lSet(String key, List<Object> value) {
 		try {
-			jedis = getResource();
-			jedis.select(index);
-			isIn = jedis.hexists(key, fieldName);
+			redisTemplate.opsForList().rightPushAll(key, value);
+			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			close(jedis);
+			return false;
 		}
-		return isIn;
 	}
-	
+
+	/**
+	 * 将list放入缓存
+	 * @param key 键
+	 * @param value 值
+	 * @param time 时间(秒)
+	 * @return
+	 */
+	public boolean lSet(String key, List<Object> value, long time) {
+		try {
+			redisTemplate.opsForList().rightPushAll(key, value);
+			if (time > 0) expire(key, time);
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	/**
+	 * 根据索引修改list中的某条数据
+	 * @param key 键
+	 * @param index 索引
+	 * @param value 值
+	 * @return
+	 */
+	public boolean lUpdateIndex(String key, long index,Object value) {
+		try {
+			redisTemplate.opsForList().set(key, index, value);
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	/**
+	 * 移除N个值为value
+	 * @param key 键
+	 * @param count 移除多少个
+	 * @param value 值
+	 * @return 移除的个数
+	 */
+	public long lRemove(String key,long count,Object value) {
+		try {
+			Long remove = redisTemplate.opsForList().remove(key, count, value);
+			return remove;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return 0;
+		}
+	}
+
 }

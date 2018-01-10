@@ -18,13 +18,14 @@
         <!-- <lucene.version>4.10.4</lucene.version>-->
         <lucene.version>6.4.1</lucene.version>
         <!--<lucene.version>6.6.0</lucene.version>-->
-        <spring.version>4.2.5.RELEASE</spring.version>
+        <spring.version>5.0.2.RELEASE</spring.version>
         <!--<logback.version>1.1.7</logback.version>-->
         <!--<slf4j.version>1.7.21</slf4j.version>-->
         <java.version>1.8</java.version>
         <jackson.version>2.8.6</jackson.version>
         <http.version>4.5.2</http.version>
         <selenium.version>2.45.0</selenium.version>
+        <arango.version>4.1.10</arango.version>
     </properties>
 
     <dependencies>
@@ -141,6 +142,11 @@
             <version>${selenium.version}</version>
         </dependency>
         <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>2.0.2.RELEASE</version>
+        </dependency>
+        <dependency>
             <groupId>ch.racic.selenium</groupId>
             <artifactId>selenium-driver-helper-phantomjs</artifactId>
             <version>2.1.1</version>
@@ -150,7 +156,11 @@
             <artifactId>phantomjsdriver</artifactId>
             <version>1.2.1</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.arangodb</groupId>
+            <artifactId>arangodb-java-driver</artifactId>
+            <version>${arango.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>
