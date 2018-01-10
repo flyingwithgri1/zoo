@@ -15,12 +15,16 @@ import com.spider.bean.Page;
 import com.spider.bean.Request;
 import com.spider.selector.Html;
 import com.spider.selector.Selectable;
-import com.spider.utils.CommonUtil;
-import com.spider.utils.HTMLEscapeUtil;
-import com.spider.utils.MongoDBUtil;
+import com.common.util.CommonUtil;
+import com.common.util.HTMLEscapeUtil;
+import com.common.util.MongoDBUtil;
 import com.spider.utils.SpiderConfig;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class BaiduNewsParser extends PropertyParser{
+
+	@Autowired
+	private MongoDBUtil mongoDBUtil;
 
 	@Override
 	protected void parseHubPage(Page page) {
@@ -92,8 +96,8 @@ public class BaiduNewsParser extends PropertyParser{
 		document.put("commentCount", "0");
 		document.put("entityUrl", page.getRequest().getUrl());
 		document.put("picAndName",jImage);
-		MongoDBUtil.getDBCollection(SpiderConfig.mongoDBName, "c_gd_news_basicinfo").insertOne(document);
-		MongoDBUtil.getDBCollection(SpiderConfig.mongoDBName, "c_gd_news_basicinfo_add").insertOne(document);
+		mongoDBUtil.getDBCollection("", "c_gd_news_basicinfo").insertOne(document);
+		mongoDBUtil.getDBCollection(SpiderConfig.mongoDBName, "c_gd_news_basicinfo_add").insertOne(document);
 		logger.info(document);
 	}
 

@@ -33,7 +33,7 @@ import com.spider.bean.Request;
 import com.spider.bean.SiteConfig;
 import com.spider.bean.SiteConfigManager;
 import com.spider.utils.SpiderConfig;
-import com.spider.utils.UrlUtils;
+import com.common.util.IPUtils;
 
 public class HttpClientDownloader implements Downloader{
 
