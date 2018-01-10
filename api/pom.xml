@@ -32,7 +32,51 @@
     <name>api</name>
     <artifactId>api</artifactId>
 
+    <profiles>
+        <profile>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <id>develop</id>
+            <properties>
+                <package.environment>develop</package.environment>
+            </properties>
+        </profile>
+        <profile>
+            <id>product</id>
+            <properties>
+                <package.environment>product</package.environment>
+            </properties>
+        </profile>
+        <profile>
+            <id>test102</id>
+            <properties>
+                <package.environment>test102</package.environment>
+            </properties>
+        </profile>
+    </profiles>
+
     <build>
+        <finalName>api</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>src/environment/${package.environment}</directory>
+            </resource>
+        </resources>
+        <testResources>
+            <testResource>
+                <directory>src/main/resources</directory>
+            </testResource>
+            <testResource>
+                 <directory>src/test/resources</directory>
+             </testResource>
+            <testResource>
+                 <directory>src/environment/${package.environment}</directory>
+             </testResource>
+        </testResources>
         <plugins>
             <plugin>
                 <groupId>org.mortbay.jetty</groupId>
@@ -52,7 +96,6 @@
             </plugin>
         </plugins>
     </build>
-
     <dependencies>
         <!--dependency>
       <groupId>com.zoo</groupId>

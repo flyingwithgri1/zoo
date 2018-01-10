@@ -73,4 +73,11 @@
         <property name="user" value="" />
         <property name="passwd" value="" />
     </bean>
+    <bean id="mongoDBUtil" class="com.common.util.MongoDBUtil" init-method="init">
+        <property name="host" value="10.9.201.190" />
+        <property name="port" value="27017" />
+        <property name="user" value="" />
+        <property name="passwd" value="" />
+        <property name="dbName" value="" />
+    </bean>
 </beans>
