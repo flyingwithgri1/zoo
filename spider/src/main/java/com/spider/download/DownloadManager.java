@@ -11,11 +11,18 @@ import com.spider.bean.SiteConfigManager;
 
 public class DownloadManager implements Downloader{
 
-	private Map<String, Downloader> download = new LinkedHashMap<>();
+	private Map<String, Downloader> download = new LinkedHashMap<String, Downloader>();
 	
 	public DownloadManager() {
-		registerDownload("HTTP", HttpClientDownloader.class.newInstance());
-		registerDownload("PLUGINUNIT", PhantomJSDownloader.class.newInstance());
+		try {
+			registerDownload("HTTP", HttpClientDownloader.class.newInstance());
+			registerDownload("PLUGINUNIT", PhantomJSDownloader.class.newInstance());
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		}
+
 	}
 	
 	private void registerDownload(String key,Downloader downloader){

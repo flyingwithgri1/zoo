@@ -141,7 +141,7 @@ public class SiteConfig implements Cloneable{
 	}
 
 	/**
-     * Add a cookie with domain {@link #getDomain()}
+     * Add a cookie with domain {@link #()}
      * 
      * @param name
      * @param value
@@ -339,7 +339,7 @@ public class SiteConfig implements Cloneable{
      * 
      * @param key
      *            key of http header, there are some keys constant in
-     *            {@link HeaderConst}
+     *            {@link }
      * @param value
      *            value of header
      * @return
