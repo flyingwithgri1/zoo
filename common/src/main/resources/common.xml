@@ -66,4 +66,11 @@
     <bean id="jedisUtil" class="com.common.util.JedisUtil">
         <property name="redisTemplate" ref="redisTemplate" />
     </bean>
+
+    <bean id="arangoUtil" class="com.common.util.ArangoUtil" init-method="init">
+        <property name="host" value="10.9.201.197" />
+        <property name="port" value="8529" />
+        <property name="user" value="" />
+        <property name="passwd" value="" />
+    </bean>
 </beans>
